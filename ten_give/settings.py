@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ouma&^$sq!!nyw()723pl96#%$+z=mlg=%5x#k(*lbs2_95k)*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['172.104.12.97','10give.com','www.10give.com']
 
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['172.104.12.97','10give.com','www.10give.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'give10.apps.Give10Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'ten_give.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['ten_give/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
