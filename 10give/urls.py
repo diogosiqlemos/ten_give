@@ -2,7 +2,7 @@ from django.urls import path
 from .views import index, SignUpView, ViewByUser, ViewAll, TipCreate
 from .views import TipDetail, TiptypeCreate, TipDeleteView, TipUpdate, SearchView
 
-app_name = '10give'
+app_name = 'tengive'
 
 urlpatterns = [
     path('', index, name='index'),

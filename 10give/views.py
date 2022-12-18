@@ -25,7 +25,7 @@ def index(request):
 
 class SignUpView(CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy('10give:index')
+    success_url = reverse_lazy('tengive:index')
     template_name = '10give/signup.html'
 
 
@@ -64,12 +64,12 @@ class SearchView(ListView):
 class TiptypeCreate(LoginRequiredMixin, CreateView):
     model = Tiptype
     fields = '__all__'
-    success_url = reverse_lazy('10give:index')
+    success_url = reverse_lazy('tengive:index')
 
 class TipCreate(LoginRequiredMixin, CreateView):
     model = Tip
     fields = ['title','tiptype','why_10','more_information','link']
-    success_url = reverse_lazy('10give:index')
+    success_url = reverse_lazy('tengive:index')
 
     def form_valid(self, form):
         form.instance.tip_giver = self.request.user
@@ -79,7 +79,7 @@ class TipCreate(LoginRequiredMixin, CreateView):
 class TipUpdate(LoginRequiredMixin, UpdateView):
     model = Tip
     fields = ['title','tiptype','why_10','more_information','tip_date','link']
-    success_url = reverse_lazy('10give:index')
+    success_url = reverse_lazy('tengive:index')
 
     def form_valid(self, form):
         form.instance.tip_giver = self.request.user
@@ -87,7 +87,7 @@ class TipUpdate(LoginRequiredMixin, UpdateView):
 
 class TipDeleteView(LoginRequiredMixin, DeleteView):
     model = Tip
-    success_url = reverse_lazy('10give:index')
+    success_url = reverse_lazy('tengive:index')
 
 class TipDetail(LoginRequiredMixin, DetailView):
     model = Tip
