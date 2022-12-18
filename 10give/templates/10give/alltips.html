@@ -9,7 +9,7 @@
 <ul>
     {% for tip in tip_list %}
     <li>
-        <a href="{% url 'give10:tip_detail' tip.pk %}">{{tip}} - {{tip.tip_giver}}</a>
+        <a href="{% url '10give:tip_detail' tip.pk %}">{{tip}} - {{tip.tip_giver}}</a>
         <br>
     </li>
     {% endfor %}

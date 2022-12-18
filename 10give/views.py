@@ -20,18 +20,18 @@ def index(request):
         'num_users':num_users,
     }
 
-    return render(request, 'give10/index.html', context=context)
+    return render(request, '10give/index.html', context=context)
 
 
 class SignUpView(CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy('give10:index')
-    template_name = 'give10/signup.html'
+    success_url = reverse_lazy('10give:index')
+    template_name = '10give/signup.html'
 
 
 class ViewByUser(LoginRequiredMixin, ListView):
     model = Tip
-    template_name = 'give10/profile.html'
+    template_name = '10give/profile.html'
     paginate_by = 5
 
     def get_queryset(self):
@@ -39,7 +39,7 @@ class ViewByUser(LoginRequiredMixin, ListView):
 
 class ViewAll(LoginRequiredMixin, ListView):
     model = Tip
-    template_name = 'give10/alltips.html'
+    template_name = '10give/alltips.html'
     paginate_by = 5
 
     def get_queryset(self):
@@ -47,7 +47,7 @@ class ViewAll(LoginRequiredMixin, ListView):
 
 class SearchView(ListView):
     model = Tip
-    template_name = 'give10/search.html'
+    template_name = '10give/search.html'
     context_object_name = 'all_search_results'
 
     def get_queryset(self):
@@ -64,12 +64,12 @@ class SearchView(ListView):
 class TiptypeCreate(LoginRequiredMixin, CreateView):
     model = Tiptype
     fields = '__all__'
-    success_url = reverse_lazy('give10:index')
+    success_url = reverse_lazy('10give:index')
 
 class TipCreate(LoginRequiredMixin, CreateView):
     model = Tip
     fields = ['title','tiptype','why_10','more_information','link']
-    success_url = reverse_lazy('give10:index')
+    success_url = reverse_lazy('10give:index')
 
     def form_valid(self, form):
         form.instance.tip_giver = self.request.user
@@ -79,7 +79,7 @@ class TipCreate(LoginRequiredMixin, CreateView):
 class TipUpdate(LoginRequiredMixin, UpdateView):
     model = Tip
     fields = ['title','tiptype','why_10','more_information','tip_date','link']
-    success_url = reverse_lazy('give10:index')
+    success_url = reverse_lazy('10give:index')
 
     def form_valid(self, form):
         form.instance.tip_giver = self.request.user
@@ -87,7 +87,7 @@ class TipUpdate(LoginRequiredMixin, UpdateView):
 
 class TipDeleteView(LoginRequiredMixin, DeleteView):
     model = Tip
-    success_url = reverse_lazy('give10:index')
+    success_url = reverse_lazy('10give:index')
 
 class TipDetail(LoginRequiredMixin, DetailView):
     model = Tip

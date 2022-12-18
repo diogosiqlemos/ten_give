@@ -10,7 +10,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="{% static 'give10/custom.css' %}">
+    <link rel="stylesheet" href="{% static '10give/custom.css' %}">
 
     <title>Document</title>
 </head>
@@ -20,25 +20,25 @@
         <div class="container-fluid">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'give10:index' %}">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url '10give:index' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'give10:profile' %}">My Tips</a>
+                <a class="nav-link" href="{% url '10give:profile' %}">My Tips</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'give10:new_tip' %}">New Tip</a>
+                <a class="nav-link" href="{% url '10give:new_tip' %}">New Tip</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'give10:new_tiptype' %}">New Tip Type</a>
+                <a class="nav-link" href="{% url '10give:new_tiptype' %}">New Tip Type</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'give10:signup' %}">New User</a>
+                <a class="nav-link" href="{% url '10give:signup' %}">New User</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'give10:all_tips' %}">See All Tips</a>
+                <a class="nav-link" href="{% url '10give:all_tips' %}">See All Tips</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'give10:search' %}">Search Tips</a>
+                <a class="nav-link" href="{% url '10give:search' %}">Search Tips</a>
               </li>
             </ul>
         </div>

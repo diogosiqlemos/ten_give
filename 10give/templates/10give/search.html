@@ -7,7 +7,7 @@
 <h2>You can search by Tip Title, Tip Type and Tip Giver!</h2>
 <br>
 
-<form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'give10:search' %}" >
+<form class="form-inline my-2 my-lg-0" method="GET" action="{% url '10give:search' %}" >
             <input class="form-control mr-sm-2" type="search" name="search">
             <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit"> Search </button>
 </form>
@@ -17,7 +17,7 @@
 <ul>
     {% for tip in all_search_results %}
     <li>
-        <a href="{% url 'give10:tip_detail' tip.pk %}">{{tip}} - {{tip.tip_giver}}</a>
+        <a href="{% url '10give:tip_detail' tip.pk %}">{{tip}} - {{tip.tip_giver}}</a>
         <br>
     </li>
     {% empty %}

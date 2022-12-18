@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['172.104.12.97','10give.com','www.10give.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'give10.apps.Give10Config',
+    '10give.apps.Give10Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'ten_give.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['ten_give/templates/'],
+        'DIRS': ['/var/www/ten_give/ten_give/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
