@@ -20,18 +20,18 @@ def index(request):
         'num_users':num_users,
     }
 
-    return render(request, '10give/index.html', context=context)
+    return render(request, 'tengive/index.html', context=context)
 
 
 class SignUpView(CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('tengive:index')
-    template_name = '10give/signup.html'
+    template_name = 'tengive/signup.html'
 
 
 class ViewByUser(LoginRequiredMixin, ListView):
     model = Tip
-    template_name = '10give/profile.html'
+    template_name = 'tengive/profile.html'
     paginate_by = 5
 
     def get_queryset(self):
@@ -39,7 +39,7 @@ class ViewByUser(LoginRequiredMixin, ListView):
 
 class ViewAll(LoginRequiredMixin, ListView):
     model = Tip
-    template_name = '10give/alltips.html'
+    template_name = 'tengive/alltips.html'
     paginate_by = 5
 
     def get_queryset(self):
@@ -47,7 +47,7 @@ class ViewAll(LoginRequiredMixin, ListView):
 
 class SearchView(ListView):
     model = Tip
-    template_name = '10give/search.html'
+    template_name = 'tengive/search.html'
     context_object_name = 'all_search_results'
 
     def get_queryset(self):

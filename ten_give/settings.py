@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ouma&^$sq!!nyw()723pl96#%$+z=mlg=%5x#k(*lbs2_95k)*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['172.104.12.97','10give.com','www.10give.com']
 
