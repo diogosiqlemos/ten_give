@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['172.104.12.97','10give.com','www.10give.com']
 # Application definition
 
 INSTALLED_APPS = [
-    '10give.apps.Give10Config',
+    'tengive.apps.Give10Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
